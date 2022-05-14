@@ -1,4 +1,3 @@
-import { useState } from "react"
 import ShipPosition from "./ShipPositions"
 
 
@@ -11,8 +10,8 @@ const RowShips=(props)=>{
             <div className="col-1 d-flex justify-content-center align-self-center">{props.num}</div>
             <div className="col-11 mx-auto">
                 <div className="row">
-                    {numeroTablero.map(()=>(
-                        <ShipPosition/>
+                    {numeroTablero.map((num)=>(
+                        <ShipPosition col={props.col} key={num}/>
                     ))}
                 </div>
             </div>

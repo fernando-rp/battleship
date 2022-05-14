@@ -6,7 +6,7 @@ const ShipPosition=(props)=>{
     const [style,setStyle]=useState("")
 
     const selectedPosition=()=>{
-            setStyle("red")  
+        setStyle(props.col)
     }
 
     return(

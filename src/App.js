@@ -16,11 +16,11 @@ function App() {
           <h1 className="title">BattleShip</h1>
           <div className="col-6">
           <h2 className="subtitle">Tu tablero:</h2>
-            <Tablero />
+            <Tablero col="red"/>
           </div>
           <div className="col-6">
-          <h2 className="subtitle">Tablero de la computadora:</h2>
-            <Tablero />
+          <h2 className="subtitle">Tablero de oponente:</h2>
+            <Tablero col="black"/>
           </div>
         </div>
       </div>

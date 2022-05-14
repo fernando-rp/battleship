@@ -1,7 +1,7 @@
 import { useState } from "react"
 import RowShips from "./RowShips"
 
-const Tablero=()=>{
+const Tablero=(props)=>{
 
     let numeroTablero=[1,2,3,4,5,6,7,8,9]
 
@@ -27,7 +27,7 @@ const Tablero=()=>{
                 {
                     numeroTablero.map((num)=>{
                         return(
-                            <RowShips num={num}/>
+                            <RowShips num={num} col={props.col} key={num}/>
                         )
                     })
                 }
