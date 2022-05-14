@@ -4,35 +4,19 @@ import RowShips from "./RowShips"
 const Tablero=(props)=>{
 
     let numeroTablero=[0,1,2,3,4,5,6,7,8]
-
-    let gameBoard = [
-        [1,1,1,1,1,0,0,0,1],
-        [0,0,0,0,0,0,0,0,1],
-        [0,0,0,0,0,0,0,0,1],
-        [0,0,0,0,0,0,0,0,1],
-        [0,0,0,0,0,0,0,0,0],
-        [1,0,0,1,1,0,0,0,0],
-        [1,0,0,0,0,0,0,0,0],
-        [1,0,0,0,0,0,0,0,0],
-        [0,1,1,1,0,0,0,0,0]
-    ];
-
-    let barcos=[]
-    for (let i = 0; i < gameBoard.length; i++) {
-        for (let j = 0; j < gameBoard.length; j++) {
-            if (gameBoard[i][j] === 1) {
-                barcos.push(([i] + [j]))
-            }
-        }
-    }
+    let barcos=props.barcos
 
     const [enviarBarcos,setEnviarBarcos]=useState([,,,,,,,,,,,,,,,,])
+    const [barcosEnviado,setBarcosEnviados]=useState(false)
 
     const shipsPosition=()=>{
 
-        // setEnviarBarcos(['00','01','02','03','04','05','06','07','08','10','11','12','13','14','15','16','17'])
-        setEnviarBarcos(barcos)
-        return enviarBarcos
+        if(barcosEnviado===false){
+            setEnviarBarcos(barcos)
+            setBarcosEnviados(true)
+            return enviarBarcos
+        }
+        
     }
 
     return(
@@ -64,12 +48,9 @@ const Tablero=(props)=>{
 
                 <div className="row mx-auto">
                     <div className="col d-flex justify-content-center">
-                    <button className="btn btn-dark mt-4 p-4" onClick={shipsPosition}>Ver Barcos</button>
+                        <button type="button" className="btn btn-dark mt-4 p-4" onClick={shipsPosition}>Ver Barcos Oponente</button>
                     </div>
-                
                 </div>
-
-                
             </div>
         </>
     )

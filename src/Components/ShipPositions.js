@@ -18,7 +18,7 @@ const ShipPosition=(props)=>{
             console.log("casi")
             for (let i = 0; i < props.barcos.length; i++) {
                 if (props.barcos[i] === props.id) {
-                    setBorder("1.5px dashed black")
+                    setBorder("2px dashed green")
                 }
             }
         }
