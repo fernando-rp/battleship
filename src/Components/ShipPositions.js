@@ -5,9 +5,8 @@ const ShipPosition=(props)=>{
 
     const [style,setStyle]=useState("")
 
-    const selectedPosition=(e)=>{
+    const selectedPosition=()=>{
         setStyle(props.col)
-        // console.log(e.target.id)
     }
 
     const[border,setBorder]=useState("0px dashed solid green")
@@ -18,14 +17,12 @@ const ShipPosition=(props)=>{
             console.log("casi")
             for (let i = 0; i < props.barcos.length; i++) {
                 if (props.barcos[i] === props.id) {
-                    setBorder("2px dashed green")
+                    setBorder("3px dashed green")
                 }
             }
         }
-    },props.barcos,props.id)
+    },[props.barcos,props.id])
     
-    
-
     return(
         <div className="col tablero" style={{ backgroundColor: style , border:border}} id={props.id} onClick={selectedPosition}></div>
     )

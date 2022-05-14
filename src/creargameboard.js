@@ -13,16 +13,21 @@ const crearGameBoard = () => {
     do{
         let i = Math.floor((Math.random() * (9)))
         let j = Math.floor((Math.random() * (9)))
+        
         if (j > 0 && j < 7 && i > 0 && i < 9 && maxShip < 4) {
+
             positionShips[i][j] = 1
             positionShips[i][j + 1] = 1
             positionShips[i][j + 2] = 1
             maxShip += 1
+            
         } else if (i > 0 && i < 7 && maxShip < 4) {
+
             positionShips[i][j] = 1
             positionShips[i + 1][j] = 1
             positionShips[i + 2][j] = 1
             maxShip += 1
+
         }
     }while (maxShip<4)
   

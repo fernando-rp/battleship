@@ -6,7 +6,7 @@ const Tablero=(props)=>{
     let numeroTablero=[0,1,2,3,4,5,6,7,8]
     let barcos=props.barcos
 
-    const [enviarBarcos,setEnviarBarcos]=useState([,,,,,,,,,,,,,,,,])
+    const [enviarBarcos,setEnviarBarcos]=useState([,,,,,,,,,,,])
     const [barcosEnviado,setBarcosEnviados]=useState(false)
 
     const shipsPosition=()=>{
