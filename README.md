@@ -1,6 +1,6 @@
 # BattleShip App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicación fue desarrollada por fwd. Cualquier pull request es bienvenido, previo a una conversación de la mejora.
 
 ## Trabajar con el código:
 
