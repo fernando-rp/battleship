@@ -20,7 +20,7 @@ function App() {
           </div>
           <div className="col-6">
           <h2 className="subtitle">Tablero de oponente:</h2>
-            <Tablero col="black"/>
+            <Tablero col="blue"/>
           </div>
         </div>
       </div>
